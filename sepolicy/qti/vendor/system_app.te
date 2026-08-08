@@ -1,3 +1,9 @@
+allow system_app cgroup:dir search;
+allow system_app hal_audio_default:binder call;
+allow system_app hal_bootctl_default:binder call;
+allow system_app hal_nfc_default:binder call;
+allow system_app hal_sensors_default:binder call;
+
 # Battery Health
 r_dir_file(system_app, vendor_sysfs_usb_supply)
 
@@ -29,6 +35,7 @@ r_dir_file(system_app, sysfs_zram)
 # sysfs by default with no dedicated type, unlike the vibrator node above.
 allow system_app vendor_sysfs_oplus_chg_params:dir r_dir_perms;
 allow system_app vendor_sysfs_oplus_chg_params:file rw_file_perms;
+
 # DeviceSettings: motion smoothing sends irisConfigureSet() to the Pixelworks
 # IIris HIDL service, hosted by the iris-service in hal_graphics_composer_default
 # Only the client attribute: hal_client_domain() would also make system_app a
