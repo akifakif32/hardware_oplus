@@ -7,6 +7,10 @@ rw_dir_file(system_app, vendor_sysfs_graphics)
 # Gamespace
 r_dir_file(system_app, vendor_sysfs_sde_crtc)
 
+hal_client_domain(system_app, hal_health)
+hal_client_domain(system_app, hal_memtrack)
+hal_client_domain(system_app, hal_power)
+
 # Touchpanel
 rw_dir_file(system_app, vendor_proc_display)
 
