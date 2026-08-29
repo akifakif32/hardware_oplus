@@ -4,6 +4,7 @@
     SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+<<<<<<< HEAD
     <!-- Toast message when attempting to map the same action to multiple slider positions -->
     <string name="alert_slider_action_already_mapped">Action already mapped to another position</string>
 
@@ -32,6 +33,8 @@
     <!-- Help text for custom emoji -->
     <string name="alert_slider_emoji_help">Type an emoji to replace the default icon for each slider position</string>
 
+=======
+>>>>>>> e5d9f930 ([KeyHandler] rework torch toggle, fix undefined alert_slider_mode_torch strings)
     <!-- Torch slider modes -->
     <string name="alert_slider_mode_torch_on">Torch On</string>
     <string name="alert_slider_mode_torch_off">Torch Off</string>
