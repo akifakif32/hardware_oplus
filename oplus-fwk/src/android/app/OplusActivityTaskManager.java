@@ -7,6 +7,7 @@ import android.os.RemoteException;
 import com.oplus.app.OplusAppInfo;
 import java.util.ArrayList;
 import java.util.List;
+import com.oplus.app.OplusTaskInfoChangeListener;
 
 /* loaded from: classes.dex */
 public class OplusActivityTaskManager extends OplusBaseActivityTaskManager implements IOplusActivityTaskManager {
@@ -86,5 +87,20 @@ public class OplusActivityTaskManager extends OplusBaseActivityTaskManager imple
             data.recycle();
             reply.recycle();
         }
+    }
+
+    public List<ActivityManager.RunningTaskInfo> getVisibleTasks(int displayId)
+            throws RemoteException {
+        return new ArrayList<>();
+    }
+
+    public boolean registerTaskInfoChangeListener(OplusTaskInfoChangeListener listener,
+            int displayId, int flags) throws RemoteException {
+        return false;
+    }
+
+    public boolean unregisterTaskInfoChangeListener(OplusTaskInfoChangeListener listener)
+            throws RemoteException {
+        return false;
     }
 }

@@ -49,4 +49,6 @@ public class OplusosDisplayManager {
     public boolean setCameraBrightnessCurveEnabled(boolean enabled) {
         return false;
     }
+
+    public OplusosDisplayManager() {}
 }

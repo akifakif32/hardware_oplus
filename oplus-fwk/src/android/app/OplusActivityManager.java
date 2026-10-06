@@ -9,6 +9,8 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import com.oplus.app.OplusAppInfo;
 import java.util.List;
+import android.content.Intent;
+import java.util.ArrayList;
 
 /* loaded from: classes.dex */
 public class OplusActivityManager extends OplusBaseActivityManager implements IOplusActivityManager, IOplusActivityTaskManager {
@@ -129,4 +131,10 @@ public class OplusActivityManager extends OplusBaseActivityManager implements IO
     public boolean registerTaskInfoChangeListener(com.oplus.app.OplusTaskInfoChangeListener listener, int arg1, int arg2) {
         return true;
     }
+
+    public boolean requestDeviceFolded(int state, boolean folded) {
+        return false;
+    }
+
+    public void startActivity(Intent intent) {}
 }

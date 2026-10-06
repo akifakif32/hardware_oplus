@@ -6,4 +6,6 @@ public class BgRunningCallback {
 
     public void cancelRunningTaskInfo(int pid, int uid) {
     }
+
+    public BgRunningCallback() {}
 }
