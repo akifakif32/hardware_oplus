@@ -33,4 +33,13 @@ public class OplusView {
             String content, int status, Runnable endAction, Bundle bundle) {
         return false;
     }
+
+    public static boolean setClipExpandSize(View view, int left, int top, int right,
+            int bottom) {
+        return false;
+    }
+
+    public static boolean setShadowClippingEnabled(View view, boolean enabled) {
+        return false;
+    }
 }

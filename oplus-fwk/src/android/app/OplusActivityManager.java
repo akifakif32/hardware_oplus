@@ -11,6 +11,7 @@ import com.oplus.app.OplusAppInfo;
 import java.util.List;
 import android.content.Intent;
 import java.util.ArrayList;
+import com.oplus.osense.complexscene.OplusComplexSceneObserver;
 
 /* loaded from: classes.dex */
 public class OplusActivityManager extends OplusBaseActivityManager implements IOplusActivityManager, IOplusActivityTaskManager {
@@ -137,4 +138,14 @@ public class OplusActivityManager extends OplusBaseActivityManager implements IO
     }
 
     public void startActivity(Intent intent) {}
+
+    public boolean registerComplexSceneObserver(Bundle options,
+            OplusComplexSceneObserver observer) {
+        return false;
+    }
+
+    public boolean unregisterComplexSceneObserver(Bundle options,
+            OplusComplexSceneObserver observer) {
+        return false;
+    }
 }
