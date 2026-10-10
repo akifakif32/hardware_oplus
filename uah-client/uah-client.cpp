@@ -57,7 +57,9 @@ bool has(const std::string& s, const char* token) {
 
 // Scene names are the camera HAL's OSENSE_ACTION_CAMERA_* strings.
 std::optional<Mode> modeFor(const std::string& s) {
-    for (const char* t : {"UHD120", "8K", "HFR", "SLOW", "4K", "60FPS", "SUPER_STEADY"}) {
+    // HIGH raises the scheduler's floor for the camera's threads, which costs
+    // heat: only for the pipelines that drop frames without it.
+    for (const char* t : {"UHD120", "8K", "HFR", "SLOW"}) {
         if (has(s, t)) return Mode::CAMERA_STREAMING_HIGH;
     }
     for (const char* t : {"VIDEO", "MOVIE", "48M", "MULTI_SCENE", "STIKER_RECORD"}) {
