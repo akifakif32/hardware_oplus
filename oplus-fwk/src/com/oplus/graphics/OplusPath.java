@@ -71,6 +71,12 @@ public class OplusPath implements IOplusPath {
         this.mPath.addRoundRect(rect, reverseR, dir);
     }
 
-    public void addSmoothRoundRect(float p0, float p1, float p2, float p3, float p4, float p5, float p6, android.graphics.Path.Direction p7) { }
-    public void addSmoothRoundRect(android.graphics.RectF p0, float p1, float p2, android.graphics.Path.Direction p3) { }
+    public void addSmoothRoundRect(float left, float top, float right, float bottom, float rx,
+            float ry, float weight, Path.Direction dir) {
+        mPath.addRoundRect(left, top, right, bottom, rx, ry, dir);
+    }
+
+    public void addSmoothRoundRect(RectF rect, float radius, float weight, Path.Direction dir) {
+        mPath.addRoundRect(rect, radius, radius, dir);
+    }
 }
