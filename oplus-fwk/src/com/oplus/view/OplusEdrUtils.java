@@ -109,4 +109,11 @@ public final class OplusEdrUtils {
     public static boolean setEdrSdrRatio(SurfaceControl sc, SurfaceControl.Transaction transaction, float edrSdrRatio) {
         return false;
     }
+
+    public static class OplusEdrParameters {
+        public int[] displayPosition;
+        public Rect displayRect;
+        public float[] displayTransform;
+        public int imageRotation;
+    }
 }
