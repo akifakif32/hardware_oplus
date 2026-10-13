@@ -115,4 +115,6 @@ public class ViewRootImpl {
             this.mFrameDrawingCallback.onFrameDraw(l);
         }
     }
+
+    public void mergeWithNextTransaction(android.view.SurfaceControl.Transaction p0, long p1) { }
 }

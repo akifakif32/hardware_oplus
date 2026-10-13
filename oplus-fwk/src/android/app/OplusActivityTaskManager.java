@@ -103,4 +103,6 @@ public class OplusActivityTaskManager extends OplusBaseActivityTaskManager imple
             throws RemoteException {
         return false;
     }
+
+    public void invalidateSnapshotForSurfacePreview(java.lang.String p0) throws android.os.RemoteException { }
 }
