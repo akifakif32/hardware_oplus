@@ -116,5 +116,8 @@ public class ViewRootImpl {
         }
     }
 
-    public void mergeWithNextTransaction(android.view.SurfaceControl.Transaction p0, long p1) { }
+
+    public void mergeWithNextTransaction(SurfaceControl.Transaction transaction, long frameNumber) {
+        mViewRootImpl.mergeWithNextTransaction(transaction, frameNumber);
+    }
 }
