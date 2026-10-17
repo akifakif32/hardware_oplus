@@ -1,6 +1,7 @@
 package android.hardware.camera2;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.IOplusCameraManager;
 import android.hardware.camera2.impl.CameraMetadataNative;
@@ -23,6 +24,7 @@ import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public final class OplusCameraManager implements IOplusCameraManager {
     private static final String PERMISSION_SAFE_CAMERA = "com.oplus.permission.safe.CAMERA";
+    private static final String PERMISSION_SYSTEM_CAMERA = "android.permission.SYSTEM_CAMERA";
     private static final String PERMISSION_SATELLITE_COMMUNICATION = "com.oplus.permission.safe.SATELLITE_COMMUNICATION";
     public static final int READ_CAMERA_SERVER_MEMORY_INFO = 1;
     public static final int READ_HAL_MEMORY_INFO = 0;
@@ -153,15 +155,11 @@ public final class OplusCameraManager implements IOplusCameraManager {
         if (context == null) {
             throw new IllegalArgumentException("context was null");
         }
-        try {
-            return OplusCameraManagerGlobal.get().isAuthedClient(context.getOpPackageName());
-        } catch (CameraAccessException e) {
-            e.printStackTrace();
-            return false;
-        } catch (RemoteException e2) {
-            e2.printStackTrace();
-            return false;
-        }
+        // ColorOS's cameraserver answers CLIENT_IS_AUTHED from its own client allow-list; AOSP's
+        // cameraserver has no such transaction and always answers false. Authorize the clients
+        // allowed to open system-only cameras instead, which are the system camera apps.
+        return context.checkSelfPermission(PERMISSION_SYSTEM_CAMERA)
+                == PackageManager.PERMISSION_GRANTED;
     }
 
     @Override // android.hardware.camera2.IOplusCameraManager
