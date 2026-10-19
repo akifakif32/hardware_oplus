@@ -71,12 +71,4 @@ public class OplusPath implements IOplusPath {
         this.mPath.addRoundRect(rect, reverseR, dir);
     }
 
-    public void addSmoothRoundRect(float left, float top, float right, float bottom, float rx,
-            float ry, float weight, Path.Direction dir) {
-        mPath.addRoundRect(left, top, right, bottom, rx, ry, dir);
-    }
-
-    public void addSmoothRoundRect(RectF rect, float radius, float weight, Path.Direction dir) {
-        mPath.addRoundRect(rect, radius, radius, dir);
-    }
 }

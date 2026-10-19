@@ -116,8 +116,4 @@ public class ViewRootImpl {
         }
     }
 
-
-    public void mergeWithNextTransaction(SurfaceControl.Transaction transaction, long frameNumber) {
-        mViewRootImpl.mergeWithNextTransaction(transaction, frameNumber);
-    }
 }

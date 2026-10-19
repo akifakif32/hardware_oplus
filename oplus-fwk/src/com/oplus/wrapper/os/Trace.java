@@ -23,8 +23,6 @@ public class Trace {
         return 8L;
     }
 
-    public static final long TRACE_TAG_VIEW = android.os.Trace.TRACE_TAG_VIEW;
-
     public static void traceBegin(long traceTag, String methodName) {
         android.os.Trace.traceBegin(traceTag, methodName);
     }
