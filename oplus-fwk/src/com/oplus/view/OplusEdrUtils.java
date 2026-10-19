@@ -110,11 +110,4 @@ public final class OplusEdrUtils {
         return false;
     }
 
-    public static class OplusEdrParameters {
-        public int[] displayPosition;
-        public Rect displayRect;
-        public float[] displayTransform;
-        public int imageRotation;
-    }
-
 }
