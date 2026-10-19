@@ -22,6 +22,7 @@ public interface IJankManager extends IOplusCommonFeature {
 
     public static final class JPolicy {
         public static final long FLING_TYPE = 128;
+        public static final long IGNORE_CONTINUOUS_JANK = 512;
         public static final long IGNORE_NEXT_SCENE_FLAG = 256;
         public static final long IGNORE_TIMEOUT = 32;
         public static final long MOVE_TYPE = 64;

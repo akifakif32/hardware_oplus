@@ -9,4 +9,8 @@ public class OplusAppEnterInfo {
     public android.content.Intent intent;
     public boolean multiApp;
     public int windowMode;
+    public String launchedFromPackage;
+    public String targetName;
+
+    public java.lang.String toString() { return null; }
 }

@@ -9,4 +9,9 @@ public class OplusAppExitInfo {
     public boolean isResumingFirstStart;
     public boolean isResumingMultiApp;
     public int resumingWindowMode;
+    public String resumingActivityName;
+    public String resumingPackageName;
+    public String targetName;
+
+    public java.lang.String toString() { return null; }
 }
